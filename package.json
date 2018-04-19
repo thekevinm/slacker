@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.5.1",
+    "react-router-dom": "^4.2.2"
   },
   "boilerplate": {
     "name": "slacker",

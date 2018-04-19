@@ -1,0 +1,13 @@
+.homeContainer {
+	border: 1px solid red;
+	display: flex;
+}
+
+.messages {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.chat {
+	position: absolute;
+}

@@ -16,13 +16,18 @@ input, button {
 }
 
 h1 {
-	color: green;
+	color: rgb(206, 89, 74);
+}
+
+header {
+	text-align: center;
 }
 
 button {
 	height: 30px;
 	border:none;
 	border-left:1px solid grey;
+	cursor: pointer;
 }
 
 input {

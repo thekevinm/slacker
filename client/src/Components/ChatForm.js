@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import {sendMessage} from '../actions'
 import '../styles/chatstyles.css'
 
-export class Chatroom extends Component {
+export class ChatForm extends Component {
   state = {
     message: ''
   }
@@ -26,9 +26,6 @@ export class Chatroom extends Component {
     return (
       <div className="container">
 
-
-        
-
         <div className="formStuff">
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} placeholder="Chat Now" type="text" name="message" value={this.state.message} />
@@ -43,7 +40,7 @@ export class Chatroom extends Component {
 
 
 
-export default Chatroom
+export default ChatForm
 
 
 

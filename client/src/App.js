@@ -1,47 +1,22 @@
 import React, { Component } from 'react'
-import {Chatroom} from './Components/Chatroom'
+import {ChatForm} from './Components/ChatForm'
 import {connect} from 'react-redux'
+// import './styles/chatstyles.css'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
+import Home from './Components/Home'
 
 class App extends Component {
   render() {
     return (
-      <div>
+    <Router>
+    	<div>
 
-      <header>
-        <h1>Slacker</h1>
-      </header>
-      
-      <div className="messages">
-        {this.props.messages.map(msg => (
-           <div className="messStuff">
-              <div className="nameandimg">
-                <img src="http://placehold.it/50/50" />
-                <h4>Name</h4>
-                <h6>timestamp</h6>
-              </div>
+    		<Route exact path="/" component={Home} />
 
-              <div className="messAge">
-                <p>{msg.message}</p>
-              </div>
-
-            </div>
-          ))}
-        </div>
-
-        <Chatroom />
-
-      </div>
+    	</div>
+    </Router>
   )}
 }
 
 
-function mapStateToProps(state) {
-  console.log(state)
-  return {
-    messages: state.messages
-
-  }
-
-}
-
-export default connect(mapStateToProps)(App)
+export default App
