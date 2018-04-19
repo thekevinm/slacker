@@ -1,0 +1,77 @@
+body {box-sizing: border-box;}
+*, *:before, *:after {box-sizing: inherit;}
+
+body {
+	background-color: silver;
+}
+
+img {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+}
+
+input, button {
+	outline: none;
+}
+
+h1 {
+	color: green;
+}
+
+button {
+	height: 30px;
+	border:none;
+	border-left:1px solid grey;
+}
+
+input {
+	border:none;
+	width:550px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+.nameandimg {
+	display: flex;
+	height: 50px;
+	align-items: center;
+}
+
+.messAge {
+	display: flex;
+	margin-left: 40px;
+}
+
+.messStuff {
+	margin-top: 5px;
+	margin-left: 5px;
+	border-bottom: 1px solid grey;
+	margin-right: 5px;
+}
+
+.messages {
+	border:1px solid grey;
+	border-radius: 5px;
+	border-bottom:none;
+	margin:auto;
+	width: 700px;
+	height: 700px;
+	overflow: hidden;
+	overflow: scroll;
+	background-color:white;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.formStuff {
+	display: flex;
+	border-radius: 5px;
+	margin:auto;
+	width: 700px;
+	justify-content: center;
+	background-color: white;
+	border-left:1px solid grey;
+	border-right:1px solid grey;
+	border-top:1px solid grey;
+}
