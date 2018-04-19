@@ -1,6 +1,6 @@
 .homeContainer {
-	border: 1px solid red;
 	display: flex;
+	justify-content: space-evenly;
 }
 
 .messages {
@@ -10,4 +10,15 @@
 
 .chat {
 	position: absolute;
+	margin-top: 30px;
 }
+
+/*.left {
+	border:1px solid green;
+	width: 400px;
+}
+
+.right {
+	border:1px solid purple;
+	width: 400px;
+}*/

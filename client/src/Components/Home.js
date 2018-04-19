@@ -4,6 +4,8 @@ import {connect} from 'react-redux'
 import {Header} from './Header'
 import {ChatForm} from './ChatForm'
 import '../styles/home.css'
+import {RightSide} from './RightSide'
+import {LeftSide} from './LeftSide'
 
 class Home extends Component {
 	static defaultProps = {
@@ -17,9 +19,7 @@ class Home extends Component {
 
 				<div className="homeContainer">
 
-					<div className="left">
-						<h2>hello</h2>
-					</div>
+				<LeftSide />
 
 					<div className="messages">
 
@@ -32,7 +32,7 @@ class Home extends Component {
 	                			<div className="nameandimg">
 	                  				<img src="http://placehold.it/50/50" />
 	                  				<h4>Name</h4>
-	                  				<h6>timestamp</h6>
+	                  				<h6>5:15pm</h6>
 	                			</div>
 
 	                			<div className="messAge">
@@ -42,10 +42,10 @@ class Home extends Component {
 	              			</div>
 	            		))}
          			</div>
+					
+         			<RightSide />
 
-				
-
-			</div>
+				</div>
 
 			</div>
 		)
