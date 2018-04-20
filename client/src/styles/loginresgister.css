@@ -1,0 +1,59 @@
+.loginInput::placeholder {
+	color: rgb(206, 89, 74);
+}
+
+legend, h5 {
+	color: rgb(206, 89, 74);
+}
+
+legend {
+	font-weight: bold;
+}
+
+.loginnregisterContainer {
+	width: 800px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	height: 600px;
+	justify-content: space-evenly;
+}
+
+input {
+	border: none;
+}
+
+.loginInput {
+	margin-left: 10px;
+	background-color: silver;
+	color: rgb(206, 89, 74);
+}
+
+.loginButton {
+	background-color: silver;
+	border: none;
+	color: rgb(206, 89, 74);
+	font-weight: bold;
+}
+
+.loginButton:hover {
+	background-color: grey;
+	border-radius: 5px;
+}
+
+.registerButton {
+	background-color: silver;
+	border:none;
+	color: rgb(206, 89, 74);
+	margin-left:350px;
+	font-weight: bold;
+}
+
+.registerButton:hover {
+	background-color: grey;
+	border-radius: 5px;
+} 
+
+.imgUpload {
+	color: rgb(206, 89, 74);
+}

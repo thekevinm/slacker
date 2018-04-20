@@ -5,7 +5,7 @@ body {
 	background-color: silver;
 }
 
-img {
+.chatIcon {
 	border-radius: 50%;
 	height: 40px;
 	width: 40px;
@@ -29,14 +29,14 @@ header {
 	text-align: center;
 }
 
-button {
+.chatButton {
 	height: 30px;
 	border:none;
 	border-left:1px solid grey;
 	cursor: pointer;
 }
 
-input {
+.chatInput {
 	border:none;
 	width:550px;
 	height: 30px;

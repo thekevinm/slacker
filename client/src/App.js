@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 // import './styles/chatstyles.css'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Home from './Components/Home'
+import LoginRegister from './Components/LoginRegister'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
     	<div>
 
     		<Route exact path="/" component={Home} />
+    		<Route path="/signin" component={LoginRegister} />
 
     	</div>
     </Router>

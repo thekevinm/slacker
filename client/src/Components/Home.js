@@ -6,11 +6,14 @@ import {ChatForm} from './ChatForm'
 import '../styles/home.css'
 import {RightSide} from './RightSide'
 import {LeftSide} from './LeftSide'
+var time = new Date()
+var goodtime = time.toLocaleDateString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
 
 class Home extends Component {
 	static defaultProps = {
     	messages: []
   	}
+
 	render() {
 		return (
 			<div>
@@ -30,9 +33,9 @@ class Home extends Component {
 	          			{this.props.messages.map(msg => (
 	             			<div className="messStuff">
 	                			<div className="nameandimg">
-	                  				<img src="http://placehold.it/50/50" />
+	                  				<img className="chatIcon" src="http://placehold.it/50/50" />
 	                  				<h4>Name</h4>
-	                  				<h6>5:15pm</h6>
+	                  				<h6>{goodtime}</h6>
 	                			</div>
 
 	                			<div className="messAge">

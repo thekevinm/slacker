@@ -1,41 +1,47 @@
 import React, { Component } from 'react'
-import '../styles/loginregister.css'
+import '../styles/loginresgister.css'
+import {Header} from './Header'
 
 export class LoginRegister extends Component {
   render() {
     return (
       <div>
 
-	    <div class="loginStuff">
+      <Header />
+
+	  <div className="loginnregisterContainer">
+
+	    <div className="loginStuff">
 			<form action="/login" method="post">
 				<fieldset>
 					<legend>Login</legend>
-						<input placeholder="username" type="text" name="username" />
-						<input placeholder="password" type="password" name="password" />
-						<button type="submit">Login</button>
+						<input className="loginInput" placeholder="Username" type="text" name="username" />
+						<input className="loginInput" placeholder="Password" type="password" name="password" />
+						<button className="loginButton" type="submit">Login</button>
 				</fieldset>
 			</form>
 		</div>
 
-		<div class="registerStuff">
+		<div className="registerStuff">
 			<form action="register" method="post" enctype="multipart/form-data">
 
 				<fieldset>
 					<legend>Register</legend>
-						<input placeholder="username" type="text" name="username" />
-						<input placeholder="password" type="password" name="password" />
-						<input placeholder="confirm password" type="password" name="confirmpassword" />
+						<input className="loginInput" placeholder="Username" type="text" name="username" />
+						<input className="loginInput" placeholder="Password" type="password" name="password" />
+						<input className="loginInput" placeholder="Confirm Password" type="password" name="confirmpassword" />
 				
-					<div class="imgStuff">	
-						<h3>Upload A Profile Picture</h3>
-						<input type="file" name="listingImg" formenctype="multipart/form-data"/>
+					<div className="imgStuff">	
+						<h5>Upload A Profile Picture:</h5>
+						<input className="imgUpload" type="file" name="listingImg" formenctype="multipart/form-data"/>
 					</div>
 
-					<button type="submit">Register</button>
+					<button className="registerButton" type="submit">Register</button>
 
 				</fieldset>
 
 			</form>
+			</div>
 		</div>
 
       </div>

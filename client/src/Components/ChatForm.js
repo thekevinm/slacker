@@ -28,8 +28,8 @@ export class ChatForm extends Component {
 
         <div className="formStuff">
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} placeholder="Chat Now" type="text" name="message" value={this.state.message} />
-          <button type="submit">Chat</button>
+          <input className="chatInput" onChange={this.handleChange} placeholder="Chat Now" type="text" name="message" value={this.state.message} />
+          <button className="chatButton" type="submit">Chat</button>
         </form>
         </div>
 
