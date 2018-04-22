@@ -14,7 +14,7 @@ export class RightSide extends Component {
 
         <div className="rightImgnName">
         	<img class="friendImg" src="http://placehold.it/50/50" />
-        	<h4>Kevin</h4>
+        	<h4 className="friendName">Kevin</h4>
         </div>	
 
       </div>

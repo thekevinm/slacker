@@ -14,6 +14,13 @@ class Home extends Component {
     	messages: []
   	}
 
+  	// componentDidMount() {
+  	// 	const time = new Date()
+  	// 	const goodtime = time.toLocaleDateString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
+  	// }
+
+  	
+
 	render() {
 		return (
 			<div>
@@ -34,7 +41,7 @@ class Home extends Component {
 	             			<div className="messStuff">
 	                			<div className="nameandimg">
 	                  				<img className="chatIcon" src="http://placehold.it/50/50" />
-	                  				<h4>Name</h4>
+	                  				<h4 className="chatName">Name</h4>
 	                  				<h6>{goodtime}</h6>
 	                			</div>
 

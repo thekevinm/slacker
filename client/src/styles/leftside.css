@@ -1,3 +1,12 @@
+a {
+	text-decoration: none;
+	color: rgb(206, 89, 74);
+}
+
+.linktoAdd {
+	margin-left: 10px;
+}
+
 .leftContainer {
 	border:1px solid grey;
 	width: 400px;
@@ -5,7 +14,12 @@
 	border-radius: 5px;
 }
 
+.titleRooms {
+	margin-left:45px;
+}
+
 .left {
+	display: flex;
 	text-align: center;
 	border-bottom:1px solid grey;
 }
@@ -18,4 +32,10 @@
 	padding-bottom: 15px;
 	align-items: center; 
 	border-bottom:1px solid lightgrey;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.roomName {
+	padding-left: 10px;
 }
