@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {Header} from './Header'
-import {ChatForm} from './ChatForm'
+import Header from './Header'
+import ChatForm from './ChatForm'
 import '../styles/home.css'
-import {RightSide} from './RightSide'
-import {LeftSide} from './LeftSide'
+import RightSide from './RightSide'
+import LeftSide from './LeftSide'
 var time = new Date()
 var goodtime = time.toLocaleDateString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
 
@@ -25,6 +25,8 @@ class Home extends Component {
 		return (
 			<div>
 
+				{this.props.isAuthenticated ? (
+				<div>
 				<Header />
 
 				<div className="homeContainer">
@@ -37,35 +39,39 @@ class Home extends Component {
 							<ChatForm />
 						</div>
 
-	          			{this.props.messages.map(msg => (
+	          			{this.props.messages.map((msg, i) => (
 	             			<div className="messStuff">
 	                			<div className="nameandimg">
-	                  				<img className="chatIcon" src="http://placehold.it/50/50" />
-	                  				<h4 className="chatName">Name</h4>
+	                  				<h4 className="chatName">{msg.username}</h4>
 	                  				<h6>{goodtime}</h6>
 	                			</div>
 
 	                			<div className="messAge">
-	                  				<p>{msg.message}</p>
+	                  				<p key={'message' + i}>{msg.message}</p>
 	                			</div>
 
 	              			</div>
 	            		))}
          			</div>
 					
-         			<RightSide />
+         			
+         			</div>
 
 				</div>
+				) : <Redirect to="/signin" />}
 
 			</div>
 		)
 	}
 }
 
+// <RightSide />
+
 function mapStateToProps(state) {
   console.log(state)
   return {
-    messages: state.messages
+    messages: state.messageReducer.messages,
+    isAuthenticated: state.authReducer.isAuthenticated
 
   }
 

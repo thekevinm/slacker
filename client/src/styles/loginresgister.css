@@ -15,7 +15,7 @@ legend {
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	height: 600px;
+	height: 100px;
 	justify-content: space-evenly;
 }
 

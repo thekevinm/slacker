@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 // import {connect} from 'react-redux'
-import {sendMessage} from '../actions'
+// import {sendMessage} from '../actions'
 import '../styles/rightside.css'
 
-export class RightSide extends Component {
+class RightSide extends Component {
   render() {
     return (
       <div className="rightContainer">
@@ -13,7 +13,6 @@ export class RightSide extends Component {
         </div>
 
         <div className="rightImgnName">
-        	<img class="friendImg" src="http://placehold.it/50/50" />
         	<h4 className="friendName">Kevin</h4>
         </div>	
 

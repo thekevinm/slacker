@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 // import {connect} from 'react-redux'
-import {sendMessage} from '../actions'
+import {sendMessage} from '../actions/messages'
 import '../styles/chatstyles.css'
 
-export class ChatForm extends Component {
+class ChatForm extends Component {
   state = {
     message: ''
   }
@@ -28,7 +28,7 @@ export class ChatForm extends Component {
 
         <div className="formStuff">
         <form onSubmit={this.handleSubmit}>
-          <input className="chatInput" onChange={this.handleChange} placeholder="Chat Now" type="text" name="message" value={this.state.message} />
+          <input autoComplete="off" className="chatInput" onChange={this.handleChange} placeholder="Chat Now" type="text" name="message" value={this.state.message} />
           <button className="chatButton" type="submit">Chat</button>
         </form>
         </div>

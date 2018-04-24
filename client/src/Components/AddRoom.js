@@ -22,7 +22,7 @@ export class AddRoom extends Component {
               <input className="loginInput" placeholder="Room Name" type="text" name="roomname" />
           
             <div className="roomUploadImg">  
-              <h5>Upload A Profile Picture:</h5>
+              <h5>Upload A Room Picture:</h5>
               <input className="roomImgUpload" type="file" name="roomImg" formenctype="multipart/form-data"/>
             </div>
 

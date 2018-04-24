@@ -1,3 +1,7 @@
+h6 {
+	padding-left: 5px;
+}
+
 .homeContainer {
 	display: flex;
 	justify-content: space-evenly;

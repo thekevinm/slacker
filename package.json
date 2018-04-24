@@ -10,7 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "concurrently": "^3.5.1",
-    "react-router-dom": "^4.2.2"
+    "config": "^1.30.0",
+    "jsonwebtoken": "^8.2.1",
+    "react-router-dom": "^4.2.2",
+    "sha1": "^1.1.1"
   },
   "boilerplate": {
     "name": "slacker",
