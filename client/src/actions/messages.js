@@ -3,23 +3,23 @@ import store from '../store'
 
 const socket = io.connect('http://localhost:3001')
 
-// socket.emit('join', {room: store.getState().messageReducer.currentRoom})
+socket.emit('join', {room: store.getState().messageReducer.currentRoom})
 
 socket.on('message', data => {
   addMessage(data)
 })
 
-// socket.on('update rooms', rooms => {
-//   updateRooms(rooms)
-// })
+socket.on('update rooms', rooms => {
+  updateRooms(rooms)
+})
 
-// export function joinRoom(room) {
-//   socket.emit('join', {room: room})
-//   store.dispatch({
-//     type: 'JOIN_ROOM',
-//     payload: room
-//   })
-// }
+export function joinRoom(room) {
+  socket.emit('join', {room: room})
+  store.dispatch({
+    type: 'JOIN_ROOM',
+    payload: room
+  })
+}
 
 export function addMessage(message) {
   store.dispatch({
@@ -30,16 +30,22 @@ export function addMessage(message) {
 
 export function sendMessage(message) {
 const username = store.getState().authReducer.username
-// const roomname = store.getState().messageReducer.currentRoom
+const roomname = store.getState().messageReducer.currentRoom
 
 socket.emit('message', {
   username: username,
-  message: message
+  message: message,
+  roomname: roomname
     })
 }
 
-// export function sendMessage(message) {
-//  socket.emit('message', {
-//    message: message
-//  })
-// }
+export function updateRooms(rooms) {
+	store.dispatch({
+		type: 'UPDATE_ROOMS',
+		payload: rooms
+	})
+}
+
+export function createRoom(room) {
+	socket.emit('create room', room)
+}

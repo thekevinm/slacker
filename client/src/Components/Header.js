@@ -10,7 +10,7 @@ class Header extends Component {
       <div>
 
         <header>
-        	<Link to="/">Logout</Link>	
+        	<Link to="/logout">Logout</Link>	
           <h1>Slacker</h1>
           	<Link to="signin">Log In / Register</Link>
         </header>

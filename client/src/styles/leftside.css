@@ -3,25 +3,52 @@ a {
 	color: rgb(206, 89, 74);
 }
 
-.linktoAdd {
-	margin-left: 10px;
+ul, li {
+	list-style: none;
 }
 
+.addRoomButt {
+	border: none;
+	background-color: inherit;
+	color: rgb(206, 89, 74);
+}
+
+.roomInput {
+	background-color: inherit;
+	color:rgb(206, 89, 74);
+}
+
+.roomInput::placeholder {
+	color:rgb(206, 89, 74);
+}
+
+/*.linktoAdd {
+	margin-left: 0px;
+}*/
+
 .leftContainer {
+/*	display: flex;
+	flex-direction: column;*/
 	border:1px solid grey;
 	width: 400px;
 	height: 730px;
 	border-radius: 5px;
 }
 
-.titleRooms {
-	margin-left:45px;
-}
-
 .left {
 	display: flex;
 	text-align: center;
+	flex-direction: column;
 	border-bottom:1px solid grey;
+}
+
+.leftImgnName:hover {
+	color: green;
+	cursor: pointer;
+}
+
+.leftImgName.current {
+	background-color:green;
 }
 
 .leftImgnName {

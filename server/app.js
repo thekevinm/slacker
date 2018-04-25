@@ -18,13 +18,42 @@ app.use('/api', authorization, protectedRoutes)
 
 server.listen(3001)
 //app.listen(3001)
+let rooms = ['general']
 
 io.on('connection', (socket) => {
+	socket.on('join', roomInfo => {
+		socket.join(roomInfo.room)
+		socket.emit('update rooms', rooms)
+	})
+
 	socket.on('message', data => {
-		console.log(data)
-		io.emit('message', data)
+	const roomname = data.roomname || 'general'
+	io.to(roomname).emit('message', data)
+	})
+
+	socket.on('create room', room => {
+	if (!rooms.find(rm => rm === room)) {
+		rooms.push(room)
+
+		io.emit('update rooms', rooms)
+		}
 	})
 })
+
+// socket.on('message', data => {
+// 	const roomname = data.roomname || 'general'
+// 	io.to(roomname).emit('message', data)
+// })
+
+// socket.on('create room', room => {
+// 	if (!rooms.find(rm => rm === room)) {
+// 		rooms.push(room)
+
+// 		io.emit('update rooms', {
+// 			rooms: rooms
+// 		})
+// 	}
+// })
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))

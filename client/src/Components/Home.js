@@ -70,7 +70,7 @@ class Home extends Component {
 function mapStateToProps(state) {
   console.log(state)
   return {
-    messages: state.messageReducer.messages,
+    messages: state.messageReducer.messages.filter(message => message.roomname === state.messageReducer.currentRoom),
     isAuthenticated: state.authReducer.isAuthenticated
 
   }

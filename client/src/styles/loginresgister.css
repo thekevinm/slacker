@@ -11,7 +11,7 @@ legend {
 }
 
 .loginnregisterContainer {
-	width: 800px;
+	width: 400px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -45,7 +45,6 @@ input {
 	background-color: silver;
 	border:none;
 	color: rgb(206, 89, 74);
-	margin-left:350px;
 	font-weight: bold;
 }
 

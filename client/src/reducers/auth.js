@@ -1,7 +1,8 @@
 import jwt from 'jsonwebtoken'
+// isAuthenticated: window.localStorage.getItem('token') ? true : false
 
 const initialState = {
-  isAuthenticated: window.localStorage.getItem('token') ? true : false,
+  isAuthenticated: false,
   username: getUsername(),
   pending: false,
   message: ''
