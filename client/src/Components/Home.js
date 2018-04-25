@@ -4,10 +4,10 @@ import {connect} from 'react-redux'
 import Header from './Header'
 import ChatForm from './ChatForm'
 import '../styles/home.css'
-import RightSide from './RightSide'
+// import RightSide from './RightSide'
 import LeftSide from './LeftSide'
-var time = new Date()
-var goodtime = time.toLocaleDateString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
+// var time = new Date()
+// var goodtime = time.toLocaleDateString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
 
 class Home extends Component {
 	static defaultProps = {
@@ -43,7 +43,7 @@ class Home extends Component {
 	             			<div className="messStuff">
 	                			<div className="nameandimg">
 	                  				<h4 className="chatName">{msg.username}</h4>
-	                  				<h6>{goodtime}</h6>
+	                  				<h6>{msg.timestamp}</h6>
 	                			</div>
 
 	                			<div className="messAge">

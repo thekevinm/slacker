@@ -31,11 +31,13 @@ export function addMessage(message) {
 export function sendMessage(message) {
 const username = store.getState().authReducer.username
 const roomname = store.getState().messageReducer.currentRoom
+const timestamp = new Date().toLocaleDateString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})
 
 socket.emit('message', {
   username: username,
   message: message,
-  roomname: roomname
+  roomname: roomname,
+  timestamp: timestamp
     })
 }
 

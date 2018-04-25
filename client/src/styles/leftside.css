@@ -3,8 +3,13 @@ a {
 	color: rgb(206, 89, 74);
 }
 
+.titleRooms {
+	color: rgb(206, 89, 74);
+}
+
 ul, li {
 	list-style: none;
+	color: rgb(206, 89, 74);
 }
 
 .addRoomButt {
@@ -42,13 +47,13 @@ ul, li {
 	border-bottom:1px solid grey;
 }
 
-.leftImgnName:hover {
+li:hover {
 	color: green;
 	cursor: pointer;
 }
 
-.leftImgName.current {
-	background-color:green;
+li.current {
+	color:green;
 }
 
 .leftImgnName {

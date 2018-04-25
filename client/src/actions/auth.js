@@ -1,6 +1,6 @@
 import store from '../store'
 
-import jwt from 'jsonwebtoken'
+// import jwt from 'jsonwebtoken'
 
 import api from '../lib/axiosapi'
 api.new('/api')
@@ -22,15 +22,15 @@ export function register(username, password, fn) {
 export function login(username, password, fn) {
   api.login(username, password)
   .then(() => {
-    const username = jwt.decode(window.localStorage.getItem('token')).user
+    // const username = jwt.decode(window.localStorage.getItem('token')).user
 
-    store.dispatch({
-      type: 'AUTH_SUCCESS',
-      payload: {
-        isAuthenticated: true,
-        username: username
-      }
-    })
+    // store.dispatch({
+    //   type: 'AUTH_SUCCESS',
+    //   payload: {
+    //     isAuthenticated: true,
+    //     username: username
+    //   }
+    // })
     fn('/')
   }).catch(err => {
     console.log(err)
