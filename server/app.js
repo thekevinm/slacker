@@ -18,14 +18,15 @@ app.use('/api', authorization, protectedRoutes)
 
 server.listen(3001)
 //app.listen(3001)
-let rooms = ['general']
+
 
 io.on('connection', (socket) => {
+	let rooms = ['general']
 	socket.on('join', roomInfo => {
 		socket.join(roomInfo.room)
 		socket.emit('update rooms', rooms)
 	})
-
+	
 	socket.on('message', data => {
 	const roomname = data.roomname || 'general'
 	io.to(roomname).emit('message', data)

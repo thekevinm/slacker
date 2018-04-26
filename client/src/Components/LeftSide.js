@@ -22,8 +22,10 @@ class LeftSide extends Component {
 
   createRoom = (e) => {
     e.preventDefault()
-    createRoom(this.state.roomname)
-    this.setState({roomname:''})
+      if(this.state.roomname !== ''){
+      createRoom(this.state.roomname)
+      this.setState({roomname:''})
+    }
   }
 
 
@@ -39,13 +41,13 @@ class LeftSide extends Component {
         </form>
 		</div>
 
+    <ul className="leftImgnName">
     {this.props.rooms.map((room,i) => (
-		<ul className="leftImgnName">
         	<li key={'room' + i} onClick={() => this.callRoom(room)} className={room === this.props.currentRoom ? 'current' : ''}>
             {room}
           </li>
+        ))}
     </ul>
-    ))}
 
       </div>
     )

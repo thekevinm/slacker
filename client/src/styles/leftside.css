@@ -38,6 +38,8 @@ ul, li {
 	width: 400px;
 	height: 730px;
 	border-radius: 5px;
+	overflow: hidden;
+	overflow: scroll;
 }
 
 .left {
@@ -56,18 +58,27 @@ li.current {
 	color:green;
 }
 
+li {
+/*	padding-bottom: 10px;*/
+	border-bottom: 1px solid grey;
+	align-items: center;
+	line-height: 50px;
+}
+
 .leftImgnName {
-	display: flex;
-	height: 50px;
+/*	display: flex;
+	flex-direction: column;*/
+/*	height: 50px;
 	padding-left: 5px;
-	margin-top: 15px;
-	padding-bottom: 15px;
+	margin-top: 15px;*/
+/*	padding-bottom: 15px;
 	align-items: center; 
 	border-bottom:1px solid lightgrey;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin-left: 10px;*/
+	margin-right: 35px;
 }
 
 .roomName {
-	padding-left: 10px;
+/*	padding-left: 10px;
+	padding-right: 10px;*/
 }

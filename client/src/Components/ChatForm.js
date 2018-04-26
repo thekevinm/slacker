@@ -10,10 +10,12 @@ class ChatForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault()
-    sendMessage(this.state.message)
-    this.setState({
-      message: ''
-    })
+    if(this.state.message !== ''){
+      sendMessage(this.state.message)
+      this.setState({
+        message: ''
+      })
+    }
   }
 
   handleChange = (e) => {

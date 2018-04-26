@@ -11,6 +11,7 @@ class Header extends Component {
     e.preventDefault()
     console.log('logged out')
     api.logout()
+    this.props.history.push('/')
   }
 
   render() {
@@ -18,7 +19,7 @@ class Header extends Component {
       <div>
 
         <header>
-        	<Link to="/" onClick={this.handleLogout}>Logout</Link>	
+        	<Link to="/signin">Logout</Link>	
           <h1>Slacker</h1>
           	<Link to="signin">Log In / Register</Link>
         </header>

@@ -22,6 +22,10 @@ h6 {
 	margin-top: 30px;
 }
 
+h6 {
+	padding-left: 15px;
+}
+
 /*.left {
 	border:1px solid green;
 	width: 400px;
